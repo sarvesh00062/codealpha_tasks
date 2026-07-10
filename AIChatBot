@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class AIChatBot {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=======================================");
+        System.out.println("      WELCOME TO AI CHATBOT");
+        System.out.println("=======================================");
+        System.out.println("Type 'bye' to exit.\n");
+
+        while (true) {
+
+            System.out.print("You: ");
+            String input = sc.nextLine().toLowerCase().trim();
+
+            if (input.equals("bye")) {
+                System.out.println("Bot: Goodbye! Have a nice day.");
+                break;
+            }
+
+            else if (input.contains("hello") || input.contains("hi")) {
+                System.out.println("Bot: Hello! How can I help you?");
+            }
+
+            else if (input.contains("your name")) {
+                System.out.println("Bot: My name is CodeAlpha AI ChatBot.");
+            }
+
+            else if (input.contains("how are you")) {
+                System.out.println("Bot: I am doing great. Thank you!");
+            }
+
+            else if (input.contains("java")) {
+                System.out.println("Bot: Java is a popular object-oriented programming language.");
+            }
+
+            else if (input.contains("internship")) {
+                System.out.println("Bot: CodeAlpha internships help students gain practical experience.");
+            }
+
+            else if (input.contains("stock")) {
+                System.out.println("Bot: Stocks represent ownership in a company.");
+            }
+
+            else if (input.contains("hotel")) {
+                System.out.println("Bot: Hotels provide rooms for accommodation and reservations.");
+            }
+
+            else if (input.contains("time")) {
+                System.out.println("Bot: Sorry, I cannot access the current system time.");
+            }
+
+            else if (input.contains("thank")) {
+                System.out.println("Bot: You're welcome!");
+            }
+
+            else if (input.contains("help")) {
+                System.out.println("Bot: You can ask me about Java, internships, hotels, stocks, or greet me.");
+            }
+
+            else {
+                System.out.println("Bot: Sorry, I don't understand that. Please try another question.");
+            }
+        }
+
+        sc.close();
+    }
+}
